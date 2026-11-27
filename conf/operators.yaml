@@ -399,6 +399,20 @@ ops:
   - MoE
   stages:
   - beta: '0.0.0'
+- id: moe_gemm
+  description: Grouped GEMM for MoE experts with 16-bit weights.
+  for:
+  - moe_gemm
+  labels:
+  - deepspeed
+  - moe
+  - gemm
+  from:
+  - deepspeed
+  kind:
+  - MoE
+  stages:
+  - beta: '0.0.0'
 - id: mtp_loss_auto_scaler
   description: Scales the MTP loss gradient using an explicit scale buffer per autograd graph.
   for:
